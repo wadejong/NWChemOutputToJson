@@ -89,8 +89,8 @@ class nwchemToJson:
       functionList = [] 
       xyz = ['x','y','z']
       if spherical: 
-        for i in xrange(-lValue, lValue+1): 
-          functionList.append(i)
+        for i in range(-lValue, lValue+1): 
+          functionList.append(str(i))
         return functionList
       def funcGen(lValue,funcName):
         if lValue == 0: 
@@ -281,7 +281,7 @@ class nwchemToJson:
               if len(vars) < 1:
                  break
               coefficients[int(vars[0])-1] = float(vars[1])
-              if len(vars) > 5:
+              if len(vars) > 6:
                 coefficients[int(vars[5])-1] = float(vars[6])
             orbital['moCoefficients'] = coefficients
             molecularOrbital.append(orbital)
@@ -801,7 +801,7 @@ class basisObj:
       self.basis = {}
       self.basis['id'] = 'BasisSet.'+str(self.basCount)
       self.basis['basisFunctions'] = []
-    cartSpher = line.replace('(','').replace(')','').split()[6]
+    cartSpher = line.replace('(','').replace(')','').split()[-1]
     for _ in range(2): 
       line = streamIn.readline()
     while line:
@@ -864,16 +864,17 @@ class basisObj:
     self.basUpdated = True
   def readEcp(self,line,streamIn):
     atomBasCount = 0
-    cartSpher = line.replace('(','').replace(')','').split()[6]
+    cartSpher = line.replace('(','').replace(')','').split()[-1]
     if not self.basUpdated : 
       self.basis = {}
       self.basis['id'] = 'BasisSet.'+str(self.basCount)
       self.basis['basisFunctions'] = []
-    for _ in range(2): line = streamIn.readline()
+    line = streamIn.readline()
     while line:
-      if line.find('Module')>=0 or line.find('library')>=0: 
+      if line.find('Module')>=0 or line.find('library')>=0 or line.find('NWChem'): 
         break
-      vars = line.split()
+      vars = streamIn.readline().split()
+      print(vars)
       atomLab, atomName, elec = vars[0], vars[1].replace('(','').replace(')',''), vars[3]
       atomBasCount += 1
       ecpAtom = {}
