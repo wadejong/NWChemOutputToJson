@@ -1,635 +1,30 @@
 {
   "simulation": {
-    "simulationTime": {
-      "simulationTime": {
-        "wallTime": 8.2,
-        "cpuTime": 7.5,
-        "units": "second"
-      }
+    "simulationEnvironment": {
+      "runDate": "Tue Sep 29 15:02:13 2015",
+      "processorCount": "1",
+      "hostMachine": "fryslan",
+      "inputFileName": "prop_h2o.nw",
+      "inputData": "echo;start prop_h2o_run;title h2o;;geometry units bohr;o  0.0  0.0 0.11786656;h  0.0 1.84118838 -0.93531364;h  0.0 -1.84118838 -0.93531364;end;;basis;* library cc-pvdz;# * library aug-cc-pvtz;end;charge 0;;task scf energy;task scf optimize;task scf freq;;property;mulliken;dipole;quadrupole;octupole;esp;efield;efieldgrad;electrondensity;shielding;end;;task scf property;;geometry units bohr;o  1.0  0.0 0.11786656;h  1.0 1.84118838 -0.93531364;h  1.0 -1.84118838 -0.93531364;end;;task dft energy;task dft optimize;task dft freq;task dft property",
+      "programRun": "NWChem",
+      "programVersion": "27327"
     },
     "calculations": [
       {
-        "id": "calculation.1",
         "calculationTime": {
-          "wallTime": 0.1,
           "cpuTime": 0.1,
-          "units": "second"
-        },
-        "calculationResults": {
-          "twoElectronEnergy": {
-            "units": "Hartree",
-            "value": 36.886389532686
-          },
-          "oneElectronEnergy": {
-            "units": "Hartree",
-            "value": -120.672044194691
-          },
-          "molecularOrbitals": {
-            "id": "orbitalsMolecule.1",
-            "molecularOrbital": [
-              {
-                "id": "molecularOrbital.2.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.455401,
-                  0.47519,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -1.259342
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.3.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.462774,
-                  0.0,
-                  0.0,
-                  0.247499,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.302792,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.302792,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.6388327
-                },
-                "orbitalSymmetry": "b1"
-              },
-              {
-                "id": "molecularOrbital.4.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.273968,
-                  0.0,
-                  0.0,
-                  0.548989,
-                  0.0,
-                  0.0,
-                  0.415584,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.184524,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.184524,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.507951
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.5.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.6351,
-                  0.0,
-                  0.0,
-                  0.502944,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.4774245
-                },
-                "orbitalSymmetry": "b2"
-              },
-              {
-                "id": "molecularOrbital.6.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.911016,
-                  0.0,
-                  0.0,
-                  -0.231711,
-                  0.0,
-                  0.0,
-                  -0.351189,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.748887,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.748887,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.1451279
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.7.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.325921,
-                  0.0,
-                  0.0,
-                  0.675721,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  1.122886,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -1.122886,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.2281625
-                },
-                "orbitalSymmetry": "b1"
-              },
-              {
-                "id": "molecularOrbital.8.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  -0.202059,
-                  0.301004,
-                  0.0,
-                  0.0,
-                  0.217743,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.898667,
-                  -0.678277,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.898667,
-                  -0.678277,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.6737701
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.9.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.348785,
-                  0.0,
-                  0.0,
-                  0.173688,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.152814,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.924034,
-                  -0.828634,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.924034,
-                  0.828634,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.7436148
-                },
-                "orbitalSymmetry": "b1"
-              },
-              {
-                "id": "molecularOrbital.10.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  -0.280982,
-                  0.0,
-                  0.0,
-                  -0.83929,
-                  0.0,
-                  0.0,
-                  1.008117,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.202854,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.270875,
-                  0.202854,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.270875
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.170773
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.11.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.941867,
-                  0.0,
-                  0.0,
-                  -0.924915,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.190809
-                },
-                "orbitalSymmetry": "b2"
-              },
-              {
-                "id": "molecularOrbital.12.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.696879,
-                  0.0,
-                  0.0,
-                  1.527892,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.329059,
-                  0.535156,
-                  0.416541,
-                  0.0,
-                  0.0,
-                  -0.329059,
-                  -0.535156,
-                  0.416541,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.251923
-                },
-                "orbitalSymmetry": "b1"
-              },
-              {
-                "id": "molecularOrbital.13.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.256878,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.674529,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.674529,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.419045
-                },
-                "orbitalSymmetry": "a2"
-              },
-              {
-                "id": "molecularOrbital.14.Mol.1",
-                "moCoefficients": [
-                  -0.498635,
-                  -1.042676,
-                  1.929581,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.262577,
-                  -0.306529,
-                  0.0,
-                  0.0,
-                  -0.213422,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.340118,
-                  0.0,
-                  0.0,
-                  -0.442966,
-                  0.0,
-                  -0.340118,
-                  0.0,
-                  0.0,
-                  -0.442966
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.509282
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.15.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.224011,
-                  0.0,
-                  0.0,
-                  0.691827,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.243434,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.745248,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.745248,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.703919
-                },
-                "orbitalSymmetry": "b2"
-              }
-            ],
-            "atomicOrbitalDescriptions": [
-              "1 o s",
-              "1 o s",
-              "1 o s",
-              "1 o px",
-              "1 o py",
-              "1 o pz",
-              "1 o px",
-              "1 o py",
-              "1 o pz",
-              "1 o dxx",
-              "1 o dxy",
-              "1 o dxz",
-              "1 o dyy",
-              "1 o dyz",
-              "1 o dzz",
-              "2 h s",
-              "2 h s",
-              "2 h px",
-              "2 h py",
-              "2 h pz",
-              "3 h s",
-              "3 h s",
-              "3 h px",
-              "3 h py",
-              "3 h pz"
-            ]
-          },
-          "nuclearRepulsionEnergy": {
-            "units": "Hartree",
-            "value": 7.814737464571
-          },
-          "totalEnergy": {
-            "units": "Hartree",
-            "value": -75.970917197434
-          }
+          "units": "second",
+          "wallTime": 0.1
         },
         "calculationSetup": {
-          "waveFunctionTheory": "Hartree-Fock",
-          "molecularSpinMultiplicity": 1.0,
-          "molecule": {
-            "id": "Molecule.1",
-            "symmetry": {
-              "groupname": "C1"
-            },
-            "atoms": [
-              {
-                "id": "Atom.1.Mol.1",
-                "cartesianCoordinates": {
-                  "units": "bohr",
-                  "value": [
-                    0.0,
-                    0.0,
-                    0.21063604
-                  ]
-                },
-                "elementLabel": "o",
-                "elementNumber": 8
-              },
-              {
-                "id": "Atom.2.Mol.1",
-                "cartesianCoordinates": {
-                  "units": "bohr",
-                  "value": [
-                    -1.84118838,
-                    0.0,
-                    -0.84254416
-                  ]
-                },
-                "elementLabel": "h",
-                "elementNumber": 1
-              },
-              {
-                "id": "Atom.3.Mol.1",
-                "cartesianCoordinates": {
-                  "units": "bohr",
-                  "value": [
-                    1.84118838,
-                    0.0,
-                    -0.84254416
-                  ]
-                },
-                "elementLabel": "h",
-                "elementNumber": 1
-              }
-            ]
-          },
           "outputVectors": "./prop_h2o_run.movecs",
-          "numberOfElectrons": 10,
-          "id": "calculationSetup.1",
-          "charge": 0,
           "basisSet": {
             "id": "BasisSet.1",
             "basisFunctions": [
               {
+                "basisSetHarmonicType": "cartesian",
                 "basisSetContraction": [
                   {
-                    "id": "o-orbc1",
                     "basisSetCoefficient": [
                       "0.000710",
                       "0.005470",
@@ -650,10 +45,10 @@
                       "5.02500000E+00",
                       "1.01300000E+00"
                     ],
+                    "id": "o-orbc1",
                     "basisSetShellType": "s"
                   },
                   {
-                    "id": "o-orbc2",
                     "basisSetCoefficient": [
                       -0.00016,
                       "-0.001263",
@@ -674,20 +69,20 @@
                       "5.02500000E+00",
                       "1.01300000E+00"
                     ],
+                    "id": "o-orbc2",
                     "basisSetShellType": "s"
                   },
                   {
-                    "id": "o-orbc3",
                     "basisSetCoefficient": [
                       1.0
                     ],
                     "basisSetExponent": [
                       0.3023
                     ],
+                    "id": "o-orbc3",
                     "basisSetShellType": "s"
                   },
                   {
-                    "id": "o-orbc4",
                     "basisSetCoefficient": [
                       0.043018,
                       "0.228913",
@@ -698,26 +93,27 @@
                       "3.85400000E+00",
                       "1.04600000E+00"
                     ],
+                    "id": "o-orbc4",
                     "basisSetShellType": "p"
                   },
                   {
-                    "id": "o-orbc5",
                     "basisSetCoefficient": [
                       1.0
                     ],
                     "basisSetExponent": [
                       0.2753
                     ],
+                    "id": "o-orbc5",
                     "basisSetShellType": "p"
                   },
                   {
-                    "id": "o-orbc6",
                     "basisSetCoefficient": [
                       1.0
                     ],
                     "basisSetExponent": [
                       1.185
                     ],
+                    "id": "o-orbc6",
                     "basisSetShellType": "d"
                   }
                 ],
@@ -725,13 +121,12 @@
                 "basisSetName": "cc-pvdz",
                 "id": "o-orb1",
                 "basisSetType": "orbitalBasis",
-                "elementLabel": "o",
-                "basisSetHarmonicType": "cartesian"
+                "elementLabel": "o"
               },
               {
+                "basisSetHarmonicType": "cartesian",
                 "basisSetContraction": [
                   {
-                    "id": "h-orbc1",
                     "basisSetCoefficient": [
                       "0.019685",
                       "0.137977",
@@ -742,26 +137,27 @@
                       "1.96200000E+00",
                       "4.44600000E-01"
                     ],
+                    "id": "h-orbc1",
                     "basisSetShellType": "s"
                   },
                   {
-                    "id": "h-orbc2",
                     "basisSetCoefficient": [
                       1.0
                     ],
                     "basisSetExponent": [
                       0.122
                     ],
+                    "id": "h-orbc2",
                     "basisSetShellType": "s"
                   },
                   {
-                    "id": "h-orbc3",
                     "basisSetCoefficient": [
                       1.0
                     ],
                     "basisSetExponent": [
                       0.727
                     ],
+                    "id": "h-orbc3",
                     "basisSetShellType": "p"
                   }
                 ],
@@ -769,24 +165,120 @@
                 "basisSetName": "cc-pvdz",
                 "id": "h-orb2",
                 "basisSetType": "orbitalBasis",
-                "elementLabel": "h",
-                "basisSetHarmonicType": "cartesian"
+                "elementLabel": "h"
               }
             ]
           },
+          "waveFunctionType": "RHF",
           "inputVectors": "atomic",
-          "waveFunctionType": "RHF"
+          "molecularSpinMultiplicity": 1.0,
+          "waveFunctionTheory": "Hartree-Fock",
+          "charge": 0,
+          "id": "calculationSetup.1",
+          "numberOfElectrons": 10,
+          "molecule": {
+            "symmetry": {
+              "groupname": "C1"
+            },
+            "atoms": [
+              {
+                "elementSymbol": "O",
+                "id": "Atom.1.Mol.1",
+                "elementNumber": 8,
+                "cartesianCoordinates": {
+                  "units": "bohr",
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.21063604
+                  ]
+                },
+                "elementLabel": "o"
+              },
+              {
+                "elementSymbol": "H",
+                "id": "Atom.2.Mol.1",
+                "elementNumber": 1,
+                "cartesianCoordinates": {
+                  "units": "bohr",
+                  "value": [
+                    -1.84118838,
+                    0.0,
+                    -0.84254416
+                  ]
+                },
+                "elementLabel": "h"
+              },
+              {
+                "elementSymbol": "H",
+                "id": "Atom.3.Mol.1",
+                "elementNumber": 1,
+                "cartesianCoordinates": {
+                  "units": "bohr",
+                  "value": [
+                    1.84118838,
+                    0.0,
+                    -0.84254416
+                  ]
+                },
+                "elementLabel": "h"
+              }
+            ],
+            "id": "Molecule.1"
+          }
         },
-        "calculationType": "energyCalculation"
+        "molecularFormula": "H2O1",
+        "id": "calculation.1",
+        "calculationType": "energyCalculation",
+        "calculationResults": {
+          "totalEnergy": {
+            "units": "Hartree",
+            "value": -75.970917197434
+          },
+          "nuclearRepulsionEnergy": {
+            "units": "Hartree",
+            "value": 7.814737464571
+          },
+          "twoElectronEnergy": {
+            "units": "Hartree",
+            "value": 36.886389532686
+          },
+          "oneElectronEnergy": {
+            "units": "Hartree",
+            "value": -120.672044194691
+          }
+        }
       },
       {
-        "id": "calculation.2",
         "calculationTime": {
-          "wallTime": 1.1,
           "cpuTime": 1.0,
-          "units": "second"
+          "units": "second",
+          "wallTime": 1.1
         },
+        "calculationSetup": {
+          "outputVectors": "./prop_h2o_run.movecs",
+          "basisSet": "BasisSet.1",
+          "waveFunctionType": "RHF",
+          "inputVectors": "./prop_h2o_run.movecs",
+          "molecularSpinMultiplicity": 1,
+          "waveFunctionTheory": "Hartree-Fock",
+          "charge": 0,
+          "id": "calculationSetup.2",
+          "numberOfElectrons": 0,
+          "molecule": "Molecule.1"
+        },
+        "molecularFormula": "H2O1",
+        "id": "calculation.2",
+        "calculationType": "geometryOptimization",
         "calculationResults": {
+          "totalEnergy": {
+            "units": "Hartree",
+            "value": -76.027389124189
+          },
+          "nuclearRepulsionEnergy": {
+            "units": "Hartree",
+            "value": 9.299489263562
+          },
           "twoElectronEnergy": {
             "units": "Hartree",
             "value": 38.004661537113
@@ -794,566 +286,84 @@
           "oneElectronEnergy": {
             "units": "Hartree",
             "value": -123.331539924864
-          },
-          "molecularOrbitals": {
-            "id": "orbitalsMolecule.1",
-            "molecularOrbital": [
-              {
-                "id": "molecularOrbital.2.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.439789,
-                  0.3615,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.198158,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.198158,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -1.342548
-                }
-              },
-              {
-                "id": "molecularOrbital.3.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.491629,
-                  0.0,
-                  0.0,
-                  0.218594,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.330163,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.330163,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.7053882
-                }
-              },
-              {
-                "id": "molecularOrbital.4.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.154346,
-                  0.368376,
-                  0.0,
-                  0.0,
-                  0.547062,
-                  0.0,
-                  0.0,
-                  0.36288,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.206384,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.206384,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.5689313
-                }
-              },
-              {
-                "id": "molecularOrbital.5.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.630923,
-                  0.0,
-                  0.0,
-                  0.495016,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.494316
-                }
-              },
-              {
-                "id": "molecularOrbital.6.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  1.077598,
-                  0.0,
-                  0.0,
-                  -0.185071,
-                  0.0,
-                  0.0,
-                  -0.336186,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.842429,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.842429,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.1851751
-                }
-              },
-              {
-                "id": "molecularOrbital.7.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.280042,
-                  0.0,
-                  0.0,
-                  0.671198,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  1.465302,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -1.465302,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.2576737
-                }
-              },
-              {
-                "id": "molecularOrbital.8.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.264066,
-                  0.0,
-                  0.0,
-                  0.482245,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.195133,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.946046,
-                  -0.66895,
-                  0.0,
-                  0.0,
-                  -0.156069,
-                  -0.946046,
-                  0.66895,
-                  0.0,
-                  0.0,
-                  0.156069
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.796929
-                }
-              },
-              {
-                "id": "molecularOrbital.9.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  -0.25253,
-                  0.315913,
-                  0.0,
-                  0.0,
-                  0.331081,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.776272,
-                  -0.539863,
-                  -0.305803,
-                  0.0,
-                  0.0,
-                  0.776272,
-                  -0.539863,
-                  0.305803,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.8647268
-                }
-              },
-              {
-                "id": "molecularOrbital.10.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  -0.59136,
-                  0.0,
-                  0.0,
-                  -0.745067,
-                  0.0,
-                  0.0,
-                  1.282015,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.556632,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.237058,
-                  0.556632,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.237058
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.158115
-                }
-              },
-              {
-                "id": "molecularOrbital.11.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.967375,
-                  0.0,
-                  0.0,
-                  -1.034489,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.200031
-                }
-              },
-              {
-                "id": "molecularOrbital.12.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.729704,
-                  0.0,
-                  0.0,
-                  1.77594,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.385337,
-                  0.843599,
-                  0.300099,
-                  0.0,
-                  0.192609,
-                  -0.385337,
-                  -0.843599,
-                  0.300099,
-                  0.0,
-                  -0.192609
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.252481
-                }
-              },
-              {
-                "id": "molecularOrbital.13.Mol.1",
-                "moCoefficients": [
-                  -0.282366,
-                  -0.629506,
-                  1.065792,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.547389,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.278104,
-                  0.300031,
-                  0.0,
-                  -0.526033,
-                  0.0,
-                  -0.278104,
-                  -0.300031,
-                  0.0,
-                  -0.526033
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.422444
-                }
-              },
-              {
-                "id": "molecularOrbital.14.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.224536,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.686695,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.686695,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.479092
-                }
-              },
-              {
-                "id": "molecularOrbital.15.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.626348,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.276901,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.76932,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.76932,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.676572
-                }
-              }
-            ],
-            "atomicOrbitalDescriptions": [
-              "1 o s",
-              "1 o s",
-              "1 o s",
-              "1 o px",
-              "1 o py",
-              "1 o pz",
-              "1 o px",
-              "1 o py",
-              "1 o pz",
-              "1 o dxx",
-              "1 o dxy",
-              "1 o dxz",
-              "1 o dyy",
-              "1 o dyz",
-              "1 o dzz",
-              "2 h s",
-              "2 h s",
-              "2 h px",
-              "2 h py",
-              "2 h pz",
-              "3 h s",
-              "3 h s",
-              "3 h px",
-              "3 h py",
-              "3 h pz"
-            ]
-          },
-          "nuclearRepulsionEnergy": {
-            "units": "Hartree",
-            "value": 9.299489263562
-          },
+          }
+        }
+      },
+      {
+        "calculationTime": {
+          "cpuTime": 0.6,
+          "units": "second",
+          "wallTime": 0.7
+        },
+        "calculationSetup": {
+          "outputVectors": "./prop_h2o_run.movecs",
+          "basisSet": "BasisSet.1",
+          "waveFunctionType": "RHF",
+          "inputVectors": "./prop_h2o_run.movecs",
+          "molecularSpinMultiplicity": 1.0,
+          "waveFunctionTheory": "Hartree-Fock",
+          "charge": 0,
+          "id": "calculationSetup.3",
+          "numberOfElectrons": 10,
+          "molecule": "Molecule.1"
+        },
+        "molecularFormula": "H2O1",
+        "id": "calculation.3",
+        "calculationType": "molecularProperties",
+        "calculationResults": {
           "totalEnergy": {
             "units": "Hartree",
             "value": -76.027389124189
-          }
-        },
-        "calculationSetup": {
-          "waveFunctionTheory": "Hartree-Fock",
-          "molecule": "Molecule.1",
-          "molecularSpinMultiplicity": 1,
-          "numberOfElectrons": 0,
-          "id": "calculationSetup.2",
-          "charge": 0,
-          "basisSet": "BasisSet.1",
-          "inputVectors": "./prop_h2o_run.movecs",
-          "waveFunctionType": "RHF",
-          "outputVectors": "./prop_h2o_run.movecs"
-        },
-        "calculationType": "geometryOptimization"
-      },
-      {
-        "id": "calculation.3",
-        "calculationTime": {
-          "wallTime": 0.7,
-          "cpuTime": 0.6,
-          "units": "second"
-        },
-        "calculationResults": {
+          },
           "nuclearRepulsionEnergy": {
             "units": "Hartree",
             "value": 9.299489263562
           },
+          "twoElectronEnergy": {
+            "units": "Hartree",
+            "value": 38.004661537113
+          },
           "molecularProperties": [
             {
+              "Molecule": "Molecule.1",
+              "quadrupoleMoment": {
+                "momentYZ": {
+                  "units": "atomic units",
+                  "value": 0.0
+                },
+                "diamagneticSusceptibility": {
+                  "units": "atomic units",
+                  "value": 18.596483
+                },
+                "expansionPoint": {
+                  "units": "atomic units",
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0195683
+                  ]
+                },
+                "momentYY": {
+                  "units": "atomic units",
+                  "value": -5.2109323565
+                },
+                "momentZZ": {
+                  "units": "atomic units",
+                  "value": -4.3784931569
+                },
+                "momentXY": {
+                  "units": "atomic units",
+                  "value": 0.0
+                },
+                "momentXZ": {
+                  "units": "atomic units",
+                  "value": 0.0
+                },
+                "momentXX": {
+                  "units": "atomic units",
+                  "value": -3.0890914265
+                }
+              },
               "dipoleMoment": {
                 "momentX": {
                   "units": "atomic units",
@@ -1362,6 +372,10 @@
                 "momentZ": {
                   "units": "atomic units",
                   "value": -0.8052087008
+                },
+                "totalMoment": {
+                  "units": "atomic units",
+                  "value": 0.8052087008
                 },
                 "expansionPoint": {
                   "units": "atomic units",
@@ -1374,51 +388,8 @@
                 "momentY": {
                   "units": "atomic units",
                   "value": 0.0
-                },
-                "totalMoment": {
-                  "units": "atomic units",
-                  "value": 0.8052087008
                 }
-              },
-              "quadrupoleMoment": {
-                "momentZZ": {
-                  "units": "atomic units",
-                  "value": -4.3784931569
-                },
-                "momentYZ": {
-                  "units": "atomic units",
-                  "value": 0.0
-                },
-                "momentYY": {
-                  "units": "atomic units",
-                  "value": -5.2109323565
-                },
-                "momentXZ": {
-                  "units": "atomic units",
-                  "value": 0.0
-                },
-                "momentXX": {
-                  "units": "atomic units",
-                  "value": -3.0890914265
-                },
-                "expansionPoint": {
-                  "units": "atomic units",
-                  "value": [
-                    0.0,
-                    0.0,
-                    0.0195683
-                  ]
-                },
-                "diamagneticSusceptibility": {
-                  "units": "atomic units",
-                  "value": 18.596483
-                },
-                "momentXY": {
-                  "units": "atomic units",
-                  "value": 0.0
-                }
-              },
-              "Molecule": "Molecule.1"
+              }
             },
             {
               "electrostaticPotential": {
@@ -1427,13 +398,9 @@
               },
               "atom": "Atom.1.Mol.1",
               "electricFieldGradient": {
-                "shieldingPrincipalComponents": {
-                  "values": [
-                    45.3475,
-                    25.6815,
-                    24.3562
-                  ],
-                  "units": "ppm"
+                "shieldingAnisotropy": {
+                  "units": "ppm",
+                  "value": 20.3286
                 },
                 "shieldingProjectionVectors": {
                   "vectorValues": [
@@ -1467,10 +434,6 @@
                   "units": "ppm",
                   "value": 31.7951
                 },
-                "shieldingAnisotropy": {
-                  "units": "ppm",
-                  "value": 20.3286
-                },
                 "shieldingTensor": {
                   "units": "ppm",
                   "tensorValues": [
@@ -1497,6 +460,14 @@
                     -7.5361,
                     0.0,
                     31.7107
+                  ]
+                },
+                "shieldingPrincipalComponents": {
+                  "units": "ppm",
+                  "values": [
+                    45.3475,
+                    25.6815,
+                    24.3562
                   ]
                 }
               },
@@ -1512,13 +483,9 @@
               },
               "atom": "Atom.2.Mol.1",
               "electricFieldGradient": {
-                "shieldingPrincipalComponents": {
-                  "values": [
-                    45.3475,
-                    25.6815,
-                    24.3562
-                  ],
-                  "units": "ppm"
+                "shieldingAnisotropy": {
+                  "units": "ppm",
+                  "value": 20.3286
                 },
                 "shieldingProjectionVectors": {
                   "vectorValues": [
@@ -1552,10 +519,6 @@
                   "units": "ppm",
                   "value": 31.7951
                 },
-                "shieldingAnisotropy": {
-                  "units": "ppm",
-                  "value": 20.3286
-                },
                 "shieldingTensor": {
                   "units": "ppm",
                   "tensorValues": [
@@ -1582,6 +545,14 @@
                     -7.5361,
                     0.0,
                     31.7107
+                  ]
+                },
+                "shieldingPrincipalComponents": {
+                  "units": "ppm",
+                  "values": [
+                    45.3475,
+                    25.6815,
+                    24.3562
                   ]
                 }
               },
@@ -1597,13 +568,9 @@
               },
               "atom": "Atom.3.Mol.1",
               "electricFieldGradient": {
-                "shieldingPrincipalComponents": {
-                  "values": [
-                    45.3475,
-                    25.6815,
-                    24.3562
-                  ],
-                  "units": "ppm"
+                "shieldingAnisotropy": {
+                  "units": "ppm",
+                  "value": 20.3286
                 },
                 "shieldingProjectionVectors": {
                   "vectorValues": [
@@ -1637,10 +604,6 @@
                   "units": "ppm",
                   "value": 31.7951
                 },
-                "shieldingAnisotropy": {
-                  "units": "ppm",
-                  "value": 20.3286
-                },
                 "shieldingTensor": {
                   "units": "ppm",
                   "tensorValues": [
@@ -1668,6 +631,14 @@
                     0.0,
                     31.7107
                   ]
+                },
+                "shieldingPrincipalComponents": {
+                  "units": "ppm",
+                  "values": [
+                    45.3475,
+                    25.6815,
+                    24.3562
+                  ]
                 }
               },
               "diamagneticShielding": {
@@ -1676,1167 +647,47 @@
               }
             }
           ],
-          "twoElectronEnergy": {
-            "units": "Hartree",
-            "value": 38.004661537113
-          },
           "oneElectronEnergy": {
             "units": "Hartree",
             "value": -123.331539924864
-          },
-          "molecularOrbitals": {
-            "id": "orbitalsMolecule.1",
-            "molecularOrbital": [
-              {
-                "id": "molecularOrbital.2.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.439789,
-                  0.3615,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.198158,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.198158,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -1.342548
-                }
-              },
-              {
-                "id": "molecularOrbital.3.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.491629,
-                  0.0,
-                  0.0,
-                  0.218594,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.330163,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.330163,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.7053882
-                }
-              },
-              {
-                "id": "molecularOrbital.4.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.154346,
-                  0.368376,
-                  0.0,
-                  0.0,
-                  0.547062,
-                  0.0,
-                  0.0,
-                  0.36288,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.206384,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.206384,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.5689313
-                }
-              },
-              {
-                "id": "molecularOrbital.5.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.630923,
-                  0.0,
-                  0.0,
-                  0.495016,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.494316
-                }
-              },
-              {
-                "id": "molecularOrbital.6.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  1.077598,
-                  0.0,
-                  0.0,
-                  -0.185071,
-                  0.0,
-                  0.0,
-                  -0.336186,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.842429,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.842429,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.1851751
-                }
-              },
-              {
-                "id": "molecularOrbital.7.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.280042,
-                  0.0,
-                  0.0,
-                  0.671198,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  1.465302,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -1.465302,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.2576737
-                }
-              },
-              {
-                "id": "molecularOrbital.8.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.264066,
-                  0.0,
-                  0.0,
-                  0.482245,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.195133,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.946046,
-                  -0.66895,
-                  0.0,
-                  0.0,
-                  -0.156069,
-                  -0.946046,
-                  0.66895,
-                  0.0,
-                  0.0,
-                  0.156069
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.796929
-                }
-              },
-              {
-                "id": "molecularOrbital.9.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  -0.25253,
-                  0.315913,
-                  0.0,
-                  0.0,
-                  0.331081,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.776272,
-                  -0.539863,
-                  -0.305803,
-                  0.0,
-                  0.0,
-                  0.776272,
-                  -0.539863,
-                  0.305803,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.8647268
-                }
-              },
-              {
-                "id": "molecularOrbital.10.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  -0.59136,
-                  0.0,
-                  0.0,
-                  -0.745067,
-                  0.0,
-                  0.0,
-                  1.282015,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.556632,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.237058,
-                  0.556632,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.237058
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.158115
-                }
-              },
-              {
-                "id": "molecularOrbital.11.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.967375,
-                  0.0,
-                  0.0,
-                  -1.034489,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.200031
-                }
-              },
-              {
-                "id": "molecularOrbital.12.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.729704,
-                  0.0,
-                  0.0,
-                  1.77594,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.385337,
-                  0.843599,
-                  0.300099,
-                  0.0,
-                  0.192609,
-                  -0.385337,
-                  -0.843599,
-                  0.300099,
-                  0.0,
-                  -0.192609
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.252481
-                }
-              },
-              {
-                "id": "molecularOrbital.13.Mol.1",
-                "moCoefficients": [
-                  -0.282366,
-                  -0.629506,
-                  1.065792,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.547389,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.278104,
-                  0.300031,
-                  0.0,
-                  -0.526033,
-                  0.0,
-                  -0.278104,
-                  -0.300031,
-                  0.0,
-                  -0.526033
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.422444
-                }
-              },
-              {
-                "id": "molecularOrbital.14.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.224536,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.686695,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.686695,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.479092
-                }
-              },
-              {
-                "id": "molecularOrbital.15.Mol.1",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.626348,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.276901,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.76932,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.76932,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.676572
-                }
-              }
-            ],
-            "atomicOrbitalDescriptions": [
-              "1 o s",
-              "1 o s",
-              "1 o s",
-              "1 o px",
-              "1 o py",
-              "1 o pz",
-              "1 o px",
-              "1 o py",
-              "1 o pz",
-              "1 o dxx",
-              "1 o dxy",
-              "1 o dxz",
-              "1 o dyy",
-              "1 o dyz",
-              "1 o dzz",
-              "2 h s",
-              "2 h s",
-              "2 h px",
-              "2 h py",
-              "2 h pz",
-              "3 h s",
-              "3 h s",
-              "3 h px",
-              "3 h py",
-              "3 h pz"
-            ]
-          },
-          "totalEnergy": {
-            "units": "Hartree",
-            "value": -76.027389124189
           }
-        },
-        "calculationSetup": {
-          "waveFunctionTheory": "Hartree-Fock",
-          "molecule": "Molecule.1",
-          "molecularSpinMultiplicity": 1.0,
-          "numberOfElectrons": 10,
-          "id": "calculationSetup.3",
-          "charge": 0,
-          "basisSet": "BasisSet.1",
-          "inputVectors": "./prop_h2o_run.movecs",
-          "waveFunctionType": "RHF",
-          "outputVectors": "./prop_h2o_run.movecs"
-        },
-        "calculationType": "molecularProperties"
+        }
       },
       {
-        "id": "calculation.4",
         "calculationTime": {
-          "wallTime": 0.2,
           "cpuTime": 0.2,
-          "units": "second"
-        },
-        "calculationResults": {
-          "nuclearRepulsionEnergy": {
-            "units": "Hartree",
-            "value": 7.814737464571
-          },
-          "coulombEnergy": {
-            "units": "Hartree",
-            "value": 45.689203982851
-          },
-          "molecularOrbitals": {
-            "id": "orbitalsMolecule.2",
-            "molecularOrbital": [
-              {
-                "id": "molecularOrbital.1.Mol.2",
-                "moCoefficients": [
-                  1.005656,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -18.6034
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.2.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.447948,
-                  0.46496,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.8310968
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.3.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.485216,
-                  0.0,
-                  0.0,
-                  0.21702,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.305973,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.305973,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.4297096
-                },
-                "orbitalSymmetry": "b1"
-              },
-              {
-                "id": "molecularOrbital.4.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.339553,
-                  0.0,
-                  0.0,
-                  0.550207,
-                  0.0,
-                  0.0,
-                  0.394747,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.181299,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.181299,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.2686417
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.5.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.63475,
-                  0.0,
-                  0.0,
-                  0.500528,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.2113586
-                },
-                "orbitalSymmetry": "b2"
-              },
-              {
-                "id": "molecularOrbital.6.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.169508,
-                  0.768852,
-                  0.0,
-                  0.0,
-                  -0.307944,
-                  0.0,
-                  0.0,
-                  -0.319317,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.240502,
-                  -0.632828,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.240502,
-                  -0.632828,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.02265022
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.7.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.450714,
-                  0.0,
-                  0.0,
-                  0.574129,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.182254,
-                  0.927458,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.182254,
-                  -0.927458,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.0589791
-                },
-                "orbitalSymmetry": "b1"
-              },
-              {
-                "id": "molecularOrbital.8.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  -0.160272,
-                  0.336233,
-                  0.0,
-                  0.0,
-                  0.224292,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.883854,
-                  -0.760421,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.883854,
-                  -0.760421,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.4353794
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.9.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.33989,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.899915,
-                  1.011871,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.899915,
-                  -1.011871,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.4922238
-                },
-                "orbitalSymmetry": "b1"
-              },
-              {
-                "id": "molecularOrbital.10.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  -0.293967,
-                  0.0,
-                  0.0,
-                  -0.847535,
-                  0.0,
-                  0.0,
-                  1.039709,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.236511,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.23557,
-                  0.236511,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.23557
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.8332108
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.11.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.945298,
-                  0.0,
-                  0.0,
-                  -0.931464,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.8476422
-                },
-                "orbitalSymmetry": "b2"
-              },
-              {
-                "id": "molecularOrbital.12.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.708998,
-                  0.0,
-                  0.0,
-                  1.572209,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.365664,
-                  0.540067,
-                  0.347628,
-                  0.0,
-                  0.0,
-                  -0.365664,
-                  -0.540067,
-                  0.347628,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.9289128
-                },
-                "orbitalSymmetry": "b1"
-              },
-              {
-                "id": "molecularOrbital.13.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.269728,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.672384,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.672384,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.127708
-                },
-                "orbitalSymmetry": "a2"
-              },
-              {
-                "id": "molecularOrbital.14.Mol.2",
-                "moCoefficients": [
-                  -0.510369,
-                  -1.084776,
-                  1.949641,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.233419,
-                  -0.302636,
-                  0.0,
-                  0.0,
-                  -0.195345,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.365774,
-                  0.0,
-                  0.0,
-                  -0.426534,
-                  0.0,
-                  -0.365774,
-                  0.0,
-                  0.0,
-                  -0.426534
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.213461
-                },
-                "orbitalSymmetry": "a1"
-              },
-              {
-                "id": "molecularOrbital.15.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.209316,
-                  0.0,
-                  0.0,
-                  0.683452,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.25446,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.744984,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.744984,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.400783
-                },
-                "orbitalSymmetry": "b2"
-              }
-            ],
-            "atomicOrbitalDescriptions": [
-              "1 o s",
-              "1 o s",
-              "1 o s",
-              "1 o px",
-              "1 o py",
-              "1 o pz",
-              "1 o px",
-              "1 o py",
-              "1 o pz",
-              "1 o dxx",
-              "1 o dxy",
-              "1 o dxz",
-              "1 o dyy",
-              "1 o dyz",
-              "1 o dzz",
-              "2 h s",
-              "2 h s",
-              "2 h px",
-              "2 h py",
-              "2 h pz",
-              "3 h s",
-              "3 h s",
-              "3 h px",
-              "3 h py",
-              "3 h pz"
-            ]
-          },
-          "oneElectronEnergy": {
-            "units": "Hartree",
-            "value": -120.677256165742
-          },
-          "exchangeCorrelationEnergy": {
-            "units": "Hartree",
-            "value": -8.647484001587
-          },
-          "totalEnergy": {
-            "units": "Hartree",
-            "value": -75.820798719907
-          }
+          "units": "second",
+          "wallTime": 0.2
         },
         "calculationSetup": {
-          "waveFunctionTheory": "Density Functional Theory",
+          "basisSet": "BasisSet.1",
+          "waveFunctionType": "UHF",
           "molecularSpinMultiplicity": 1.0,
+          "waveFunctionTheory": "Density Functional Theory",
+          "exchangeCorrelationFunctional": [
+            {
+              "exchangeTermLocality": "local",
+              "exchangeTermFactor": 1.0,
+              "exchangeTermName": "Slater Exchange Functional"
+            },
+            {
+              "correlationTermLocality": "local",
+              "correlationTermName": "VWN V Correlation Functional",
+              "correlationTermFactor": 1.0
+            }
+          ],
+          "charge": 0,
+          "id": "calculationSetup.4",
+          "numberOfElectrons": 10,
           "molecule": {
-            "id": "Molecule.2",
             "symmetry": {
               "groupname": "C1"
             },
             "atoms": [
               {
+                "elementSymbol": "O",
                 "id": "Atom.1.Mol.2",
+                "elementNumber": 8,
                 "cartesianCoordinates": {
                   "units": "bohr",
                   "value": [
@@ -2845,11 +696,12 @@
                     0.21063604
                   ]
                 },
-                "elementLabel": "o",
-                "elementNumber": 8
+                "elementLabel": "o"
               },
               {
+                "elementSymbol": "H",
                 "id": "Atom.2.Mol.2",
+                "elementNumber": 1,
                 "cartesianCoordinates": {
                   "units": "bohr",
                   "value": [
@@ -2858,11 +710,12 @@
                     -0.84254416
                   ]
                 },
-                "elementLabel": "h",
-                "elementNumber": 1
+                "elementLabel": "h"
               },
               {
+                "elementSymbol": "H",
                 "id": "Atom.3.Mol.2",
+                "elementNumber": 1,
                 "cartesianCoordinates": {
                   "units": "bohr",
                   "value": [
@@ -2871,659 +724,173 @@
                     -0.84254416
                   ]
                 },
-                "elementLabel": "h",
-                "elementNumber": 1
-              }
-            ]
-          },
-          "numberOfElectrons": 10,
-          "id": "calculationSetup.4",
-          "exchangeCorrelationFunctional": [
-            {
-              "exchangeTermLocality": "local",
-              "exchangeTermName": "Slater Exchange Functional",
-              "exchangeTermFactor": 1.0
-            },
-            {
-              "correlationTermName": "VWN V Correlation Functional",
-              "correlationTermFactor": 1.0,
-              "correlationTermLocality": "local"
-            }
-          ],
-          "charge": 0,
-          "basisSet": "BasisSet.1",
-          "waveFunctionType": "UHF"
-        },
-        "calculationType": "energyCalculation"
-      },
-      {
-        "id": "calculation.5",
-        "calculationTime": {
-          "wallTime": 2.7,
-          "cpuTime": 2.6,
-          "units": "second"
-        },
-        "calculationResults": {
-          "nuclearRepulsionEnergy": {
-            "units": "Hartree",
-            "value": 9.01175026732
-          },
-          "coulombEnergy": {
-            "units": "Hartree",
-            "value": 46.704484633127
-          },
-          "molecularOrbitals": {
-            "id": "orbitalsMolecule.2",
-            "molecularOrbital": [
-              {
-                "id": "molecularOrbital.1.Mol.2",
-                "moCoefficients": [
-                  1.005689,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -18.5957
-                }
-              },
-              {
-                "id": "molecularOrbital.2.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.433092,
-                  0.364328,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.199223,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.199223,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.8906558
-                }
-              },
-              {
-                "id": "molecularOrbital.3.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.508947,
-                  0.0,
-                  0.0,
-                  0.209937,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.317521,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.317521,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.4491726
-                }
-              },
-              {
-                "id": "molecularOrbital.4.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.17538,
-                  0.409139,
-                  0.0,
-                  0.0,
-                  0.541192,
-                  0.0,
-                  0.0,
-                  0.351179,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.194809,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.194809,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.3087107
-                }
-              },
-              {
-                "id": "molecularOrbital.5.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.632671,
-                  0.0,
-                  0.0,
-                  0.492587,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.2277638
-                }
-              },
-              {
-                "id": "molecularOrbital.6.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.155907,
-                  0.889948,
-                  0.0,
-                  0.0,
-                  -0.273152,
-                  0.0,
-                  0.0,
-                  -0.308081,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.739892,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.739892,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.02561356
-                }
-              },
-              {
-                "id": "molecularOrbital.7.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.404396,
-                  0.0,
-                  0.0,
-                  0.586784,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  1.227046,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -1.227046,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.1024468
-                }
-              },
-              {
-                "id": "molecularOrbital.8.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.272345,
-                  0.0,
-                  0.0,
-                  0.276235,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.180025,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.935218,
-                  -0.942767,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.935218,
-                  0.942767,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.5099689
-                }
-              },
-              {
-                "id": "molecularOrbital.9.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  -0.233942,
-                  0.372338,
-                  0.0,
-                  0.0,
-                  0.403016,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.79707,
-                  -0.642397,
-                  -0.238915,
-                  0.0,
-                  0.0,
-                  0.79707,
-                  -0.642397,
-                  0.238915,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.5674615
-                }
-              },
-              {
-                "id": "molecularOrbital.10.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  -0.181974,
-                  -0.441983,
-                  0.0,
-                  0.0,
-                  -0.736455,
-                  0.0,
-                  0.0,
-                  1.201928,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.532342,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.23969,
-                  0.532342,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.23969
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.8416469
-                }
-              },
-              {
-                "id": "molecularOrbital.11.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.966115,
-                  0.0,
-                  0.0,
-                  -0.990653,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.8534364
-                }
-              },
-              {
-                "id": "molecularOrbital.12.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.764217,
-                  0.0,
-                  0.0,
-                  1.741937,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.350505,
-                  0.840542,
-                  0.243128,
-                  0.0,
-                  0.0,
-                  -0.350505,
-                  -0.840542,
-                  0.243128,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.9355241
-                }
-              },
-              {
-                "id": "molecularOrbital.13.Mol.2",
-                "moCoefficients": [
-                  -0.265111,
-                  -0.607175,
-                  0.888653,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.628988,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.275237,
-                  0.0,
-                  0.352064,
-                  0.0,
-                  -0.480229,
-                  0.275237,
-                  0.0,
-                  -0.352064,
-                  0.0,
-                  -0.480229
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.117575
-                }
-              },
-              {
-                "id": "molecularOrbital.14.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.247516,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.682986,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.682986,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.176126
-                }
-              },
-              {
-                "id": "molecularOrbital.15.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.669808,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.299226,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.754491,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.754491,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.354454
-                }
+                "elementLabel": "h"
               }
             ],
-            "atomicOrbitalDescriptions": [
-              "1 o s",
-              "1 o s",
-              "1 o s",
-              "1 o px",
-              "1 o py",
-              "1 o pz",
-              "1 o px",
-              "1 o py",
-              "1 o pz",
-              "1 o dxx",
-              "1 o dxy",
-              "1 o dxz",
-              "1 o dyy",
-              "1 o dyz",
-              "1 o dzz",
-              "2 h s",
-              "2 h s",
-              "2 h px",
-              "2 h py",
-              "2 h pz",
-              "3 h s",
-              "3 h s",
-              "3 h px",
-              "3 h py",
-              "3 h pz"
-            ]
+            "id": "Molecule.2"
+          }
+        },
+        "molecularFormula": "H2O1",
+        "id": "calculation.4",
+        "calculationType": "energyCalculation",
+        "calculationResults": {
+          "totalEnergy": {
+            "units": "Hartree",
+            "value": -75.820798719907
+          },
+          "exchangeCorrelationEnergy": {
+            "units": "Hartree",
+            "value": -8.647484001587
           },
           "oneElectronEnergy": {
             "units": "Hartree",
-            "value": -122.812737548266
+            "value": -120.677256165742
+          },
+          "coulombEnergy": {
+            "units": "Hartree",
+            "value": 45.689203982851
+          },
+          "nuclearRepulsionEnergy": {
+            "units": "Hartree",
+            "value": 7.814737464571
+          }
+        }
+      },
+      {
+        "calculationTime": {
+          "cpuTime": 2.6,
+          "units": "second",
+          "wallTime": 2.7
+        },
+        "calculationSetup": {
+          "basisSet": "BasisSet.1",
+          "waveFunctionType": "UHF",
+          "molecularSpinMultiplicity": 1,
+          "waveFunctionTheory": "Density Functional Theory",
+          "exchangeCorrelationFunctional": [
+            {
+              "exchangeTermLocality": "local",
+              "exchangeTermFactor": 1.0,
+              "exchangeTermName": "Slater Exchange Functional"
+            },
+            {
+              "correlationTermLocality": "local",
+              "correlationTermName": "VWN V Correlation Functional",
+              "correlationTermFactor": 1.0
+            }
+          ],
+          "charge": 0,
+          "id": "calculationSetup.5",
+          "numberOfElectrons": 0,
+          "molecule": "Molecule.2"
+        },
+        "molecularFormula": "H2O1",
+        "id": "calculation.5",
+        "calculationType": "geometryOptimization",
+        "calculationResults": {
+          "totalEnergy": {
+            "units": "Hartree",
+            "value": -75.858230011308
           },
           "exchangeCorrelationEnergy": {
             "units": "Hartree",
             "value": -8.761727363489
           },
-          "totalEnergy": {
+          "oneElectronEnergy": {
             "units": "Hartree",
-            "value": -75.858230011308
+            "value": -122.812737548266
+          },
+          "coulombEnergy": {
+            "units": "Hartree",
+            "value": 46.704484633127
+          },
+          "nuclearRepulsionEnergy": {
+            "units": "Hartree",
+            "value": 9.01175026732
           }
+        }
+      },
+      {
+        "calculationTime": {
+          "cpuTime": 0.8,
+          "units": "second",
+          "wallTime": 0.9
         },
         "calculationSetup": {
+          "basisSet": "BasisSet.1",
+          "waveFunctionType": "UHF",
+          "molecularSpinMultiplicity": 1.0,
           "waveFunctionTheory": "Density Functional Theory",
-          "molecule": "Molecule.2",
-          "molecularSpinMultiplicity": 1,
-          "numberOfElectrons": 0,
-          "id": "calculationSetup.5",
           "exchangeCorrelationFunctional": [
             {
               "exchangeTermLocality": "local",
-              "exchangeTermName": "Slater Exchange Functional",
-              "exchangeTermFactor": 1.0
+              "exchangeTermFactor": 1.0,
+              "exchangeTermName": "Slater Exchange Functional"
             },
             {
+              "correlationTermLocality": "local",
               "correlationTermName": "VWN V Correlation Functional",
-              "correlationTermFactor": 1.0,
-              "correlationTermLocality": "local"
+              "correlationTermFactor": 1.0
             }
           ],
           "charge": 0,
-          "basisSet": "BasisSet.1",
-          "waveFunctionType": "UHF"
+          "id": "calculationSetup.6",
+          "numberOfElectrons": 10,
+          "molecule": "Molecule.2"
         },
-        "calculationType": "geometryOptimization"
-      },
-      {
+        "molecularFormula": "H2O1",
         "id": "calculation.6",
-        "calculationTime": {
-          "wallTime": 0.9,
-          "cpuTime": 0.8,
-          "units": "second"
-        },
+        "calculationType": "molecularProperties",
         "calculationResults": {
+          "exchangeCorrelationEnergy": {
+            "units": "Hartree",
+            "value": -8.761725363858
+          },
           "nuclearRepulsionEnergy": {
             "units": "Hartree",
             "value": 9.01175026732
           },
-          "coulombEnergy": {
-            "units": "Hartree",
-            "value": 46.704467419613
-          },
           "molecularProperties": [
             {
+              "Molecule": "Molecule.2",
+              "quadrupoleMoment": {
+                "momentYZ": {
+                  "units": "atomic units",
+                  "value": -0.0
+                },
+                "diamagneticSusceptibility": {
+                  "units": "atomic units",
+                  "value": 19.206059
+                },
+                "expansionPoint": {
+                  "units": "atomic units",
+                  "value": [
+                    0.0,
+                    0.0,
+                    0.0493937
+                  ]
+                },
+                "momentYY": {
+                  "units": "atomic units",
+                  "value": -5.2599014514
+                },
+                "momentZZ": {
+                  "units": "atomic units",
+                  "value": -4.4067372331
+                },
+                "momentXY": {
+                  "units": "atomic units",
+                  "value": 0.0
+                },
+                "momentXZ": {
+                  "units": "atomic units",
+                  "value": -0.0
+                },
+                "momentXX": {
+                  "units": "atomic units",
+                  "value": -3.255957351
+                }
+              },
               "dipoleMoment": {
                 "momentX": {
                   "units": "atomic units",
@@ -3532,6 +899,10 @@
                 "momentZ": {
                   "units": "atomic units",
                   "value": -0.7819815441
+                },
+                "totalMoment": {
+                  "units": "atomic units",
+                  "value": 0.7819815441
                 },
                 "expansionPoint": {
                   "units": "atomic units",
@@ -3544,51 +915,8 @@
                 "momentY": {
                   "units": "atomic units",
                   "value": 0.0
-                },
-                "totalMoment": {
-                  "units": "atomic units",
-                  "value": 0.7819815441
                 }
-              },
-              "quadrupoleMoment": {
-                "momentZZ": {
-                  "units": "atomic units",
-                  "value": -4.4067372331
-                },
-                "momentYZ": {
-                  "units": "atomic units",
-                  "value": -0.0
-                },
-                "momentYY": {
-                  "units": "atomic units",
-                  "value": -5.2599014514
-                },
-                "momentXZ": {
-                  "units": "atomic units",
-                  "value": -0.0
-                },
-                "momentXX": {
-                  "units": "atomic units",
-                  "value": -3.255957351
-                },
-                "expansionPoint": {
-                  "units": "atomic units",
-                  "value": [
-                    0.0,
-                    0.0,
-                    0.0493937
-                  ]
-                },
-                "diamagneticSusceptibility": {
-                  "units": "atomic units",
-                  "value": 19.206059
-                },
-                "momentXY": {
-                  "units": "atomic units",
-                  "value": 0.0
-                }
-              },
-              "Molecule": "Molecule.2"
+              }
             },
             {
               "electrostaticPotential": {
@@ -3597,13 +925,9 @@
               },
               "atom": "Atom.1.Mol.2",
               "electricFieldGradient": {
-                "shieldingPrincipalComponents": {
-                  "values": [
-                    42.7088,
-                    26.1242,
-                    24.2349
-                  ],
-                  "units": "ppm"
+                "shieldingAnisotropy": {
+                  "units": "ppm",
+                  "value": 17.5292
                 },
                 "shieldingProjectionVectors": {
                   "vectorValues": [
@@ -3637,10 +961,6 @@
                   "units": "ppm",
                   "value": 31.0226
                 },
-                "shieldingAnisotropy": {
-                  "units": "ppm",
-                  "value": 17.5292
-                },
                 "shieldingTensor": {
                   "units": "ppm",
                   "tensorValues": [
@@ -3667,6 +987,14 @@
                     -7.0691,
                     -0.0,
                     30.4452
+                  ]
+                },
+                "shieldingPrincipalComponents": {
+                  "units": "ppm",
+                  "values": [
+                    42.7088,
+                    26.1242,
+                    24.2349
                   ]
                 }
               },
@@ -3682,13 +1010,9 @@
               },
               "atom": "Atom.2.Mol.2",
               "electricFieldGradient": {
-                "shieldingPrincipalComponents": {
-                  "values": [
-                    42.7088,
-                    26.1242,
-                    24.2349
-                  ],
-                  "units": "ppm"
+                "shieldingAnisotropy": {
+                  "units": "ppm",
+                  "value": 17.5292
                 },
                 "shieldingProjectionVectors": {
                   "vectorValues": [
@@ -3722,10 +1046,6 @@
                   "units": "ppm",
                   "value": 31.0226
                 },
-                "shieldingAnisotropy": {
-                  "units": "ppm",
-                  "value": 17.5292
-                },
                 "shieldingTensor": {
                   "units": "ppm",
                   "tensorValues": [
@@ -3752,6 +1072,14 @@
                     -7.0691,
                     -0.0,
                     30.4452
+                  ]
+                },
+                "shieldingPrincipalComponents": {
+                  "units": "ppm",
+                  "values": [
+                    42.7088,
+                    26.1242,
+                    24.2349
                   ]
                 }
               },
@@ -3767,13 +1095,9 @@
               },
               "atom": "Atom.3.Mol.2",
               "electricFieldGradient": {
-                "shieldingPrincipalComponents": {
-                  "values": [
-                    42.7088,
-                    26.1242,
-                    24.2349
-                  ],
-                  "units": "ppm"
+                "shieldingAnisotropy": {
+                  "units": "ppm",
+                  "value": 17.5292
                 },
                 "shieldingProjectionVectors": {
                   "vectorValues": [
@@ -3807,10 +1131,6 @@
                   "units": "ppm",
                   "value": 31.0226
                 },
-                "shieldingAnisotropy": {
-                  "units": "ppm",
-                  "value": 17.5292
-                },
                 "shieldingTensor": {
                   "units": "ppm",
                   "tensorValues": [
@@ -3838,6 +1158,14 @@
                     -0.0,
                     30.4452
                   ]
+                },
+                "shieldingPrincipalComponents": {
+                  "units": "ppm",
+                  "values": [
+                    42.7088,
+                    26.1242,
+                    24.2349
+                  ]
                 }
               },
               "diamagneticShielding": {
@@ -3846,609 +1174,27 @@
               }
             }
           ],
-          "molecularOrbitals": {
-            "id": "orbitalsMolecule.2",
-            "molecularOrbital": [
-              {
-                "id": "molecularOrbital.1.Mol.2",
-                "moCoefficients": [
-                  1.005689,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -18.5957
-                }
-              },
-              {
-                "id": "molecularOrbital.2.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.433092,
-                  0.364328,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.199223,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.199223,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.8906559
-                }
-              },
-              {
-                "id": "molecularOrbital.3.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.508947,
-                  0.0,
-                  0.0,
-                  0.209937,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.317521,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.317521,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.4491727
-                }
-              },
-              {
-                "id": "molecularOrbital.4.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.17538,
-                  0.409139,
-                  0.0,
-                  0.0,
-                  0.541192,
-                  0.0,
-                  0.0,
-                  0.351179,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.194809,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.194809,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.3087108
-                }
-              },
-              {
-                "id": "molecularOrbital.5.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.632671,
-                  0.0,
-                  0.0,
-                  0.492587,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 2.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": -0.227764
-                }
-              },
-              {
-                "id": "molecularOrbital.6.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.155907,
-                  0.889948,
-                  0.0,
-                  0.0,
-                  -0.273152,
-                  0.0,
-                  0.0,
-                  -0.308081,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.739892,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.739892,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.02561352
-                }
-              },
-              {
-                "id": "molecularOrbital.7.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.404396,
-                  0.0,
-                  0.0,
-                  0.586784,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  1.227046,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -1.227046,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.1024468
-                }
-              },
-              {
-                "id": "molecularOrbital.8.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.272345,
-                  0.0,
-                  0.0,
-                  0.276235,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.180025,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.935218,
-                  -0.942767,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.935218,
-                  0.942767,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.5099688
-                }
-              },
-              {
-                "id": "molecularOrbital.9.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  -0.233942,
-                  0.372338,
-                  0.0,
-                  0.0,
-                  0.403016,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.79707,
-                  -0.642397,
-                  -0.238915,
-                  0.0,
-                  0.0,
-                  0.79707,
-                  -0.642397,
-                  0.238915,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.5674614
-                }
-              },
-              {
-                "id": "molecularOrbital.10.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  -0.181974,
-                  -0.441983,
-                  0.0,
-                  0.0,
-                  -0.736455,
-                  0.0,
-                  0.0,
-                  1.201928,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.532342,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.23969,
-                  0.532342,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.23969
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.8416468
-                }
-              },
-              {
-                "id": "molecularOrbital.11.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.966115,
-                  0.0,
-                  0.0,
-                  -0.990653,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.8534363
-                }
-              },
-              {
-                "id": "molecularOrbital.12.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.764217,
-                  0.0,
-                  0.0,
-                  1.741937,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.350505,
-                  0.840542,
-                  0.243128,
-                  0.0,
-                  0.0,
-                  -0.350505,
-                  -0.840542,
-                  0.243128,
-                  0.0,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 0.935524
-                }
-              },
-              {
-                "id": "molecularOrbital.13.Mol.2",
-                "moCoefficients": [
-                  -0.265111,
-                  -0.607175,
-                  0.888653,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.628988,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.275237,
-                  0.0,
-                  0.352064,
-                  0.0,
-                  -0.480229,
-                  0.275237,
-                  0.0,
-                  -0.352064,
-                  0.0,
-                  -0.480229
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.117575
-                }
-              },
-              {
-                "id": "molecularOrbital.14.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.247516,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.682986,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.682986,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.176126
-                }
-              },
-              {
-                "id": "molecularOrbital.15.Mol.2",
-                "moCoefficients": [
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.669808,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  -0.299226,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.754491,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.0,
-                  0.754491,
-                  0.0
-                ],
-                "orbitalOccupancy": 0.0,
-                "orbitalEnergy": {
-                  "units": "Hartree",
-                  "value": 1.354454
-                }
-              }
-            ],
-            "atomicOrbitalDescriptions": [
-              "1 o s",
-              "1 o s",
-              "1 o s",
-              "1 o px",
-              "1 o py",
-              "1 o pz",
-              "1 o px",
-              "1 o py",
-              "1 o pz",
-              "1 o dxx",
-              "1 o dxy",
-              "1 o dxz",
-              "1 o dyy",
-              "1 o dyz",
-              "1 o dzz",
-              "2 h s",
-              "2 h s",
-              "2 h px",
-              "2 h py",
-              "2 h pz",
-              "3 h s",
-              "3 h s",
-              "3 h px",
-              "3 h py",
-              "3 h pz"
-            ]
-          },
-          "oneElectronEnergy": {
+          "coulombEnergy": {
             "units": "Hartree",
-            "value": -122.812722334391
-          },
-          "exchangeCorrelationEnergy": {
-            "units": "Hartree",
-            "value": -8.761725363858
+            "value": 46.704467419613
           },
           "totalEnergy": {
             "units": "Hartree",
             "value": -75.858230011316
+          },
+          "oneElectronEnergy": {
+            "units": "Hartree",
+            "value": -122.812722334391
           }
-        },
-        "calculationSetup": {
-          "waveFunctionTheory": "Density Functional Theory",
-          "molecule": "Molecule.2",
-          "molecularSpinMultiplicity": 1.0,
-          "numberOfElectrons": 10,
-          "id": "calculationSetup.6",
-          "exchangeCorrelationFunctional": [
-            {
-              "exchangeTermLocality": "local",
-              "exchangeTermName": "Slater Exchange Functional",
-              "exchangeTermFactor": 1.0
-            },
-            {
-              "correlationTermName": "VWN V Correlation Functional",
-              "correlationTermFactor": 1.0,
-              "correlationTermLocality": "local"
-            }
-          ],
-          "charge": 0,
-          "basisSet": "BasisSet.1",
-          "waveFunctionType": "UHF"
-        },
-        "calculationType": "molecularProperties"
+        }
       }
     ],
-    "simulationEnvironment": {
-      "processorCount": "1",
-      "programVersion": "27327",
-      "programRun": "NWChem",
-      "runDate": "Tue Sep 29 15:02:13 2015",
-      "hostMachine": "fryslan",
-      "inputFileName": "prop_h2o.nw",
-      "inputData": "echo;start prop_h2o_run;title h2o;;geometry units bohr;o  0.0  0.0 0.11786656;h  0.0 1.84118838 -0.93531364;h  0.0 -1.84118838 -0.93531364;end;;basis;* library cc-pvdz;# * library aug-cc-pvtz;end;charge 0;;task scf energy;task scf optimize;task scf freq;;property;mulliken;dipole;quadrupole;octupole;esp;efield;efieldgrad;electrondensity;shielding;end;;task scf property;;geometry units bohr;o  1.0  0.0 0.11786656;h  1.0 1.84118838 -0.93531364;h  1.0 -1.84118838 -0.93531364;end;;task dft energy;task dft optimize;task dft freq;task dft property"
+    "simulationTime": {
+      "simulationTime": {
+        "cpuTime": 7.5,
+        "units": "second",
+        "wallTime": 8.2
+      }
     }
   }
 }
