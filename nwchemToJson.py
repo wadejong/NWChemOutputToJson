@@ -1,4 +1,4 @@
-import json, sys, string
+import json, sys, string, itertools
 from collections import OrderedDict
 
 class nwchemToJson:
@@ -67,6 +67,7 @@ class nwchemToJson:
 
   def setMoleculeID(self):
     self.calcTask['id'] = 'calculation.'+str(self.taskNumber)
+    self.calcTask['molecularFormula'] = self.molecule.molecularFormula
  
   def setSetup(self):
     if self.molecule.geomUpdated:
@@ -929,11 +930,30 @@ class moleculeObj:
     self.geomUpdated = False
     self.molecule = {}
     self.atomCount = 0
+    self.molecularFormula = ''
   def readGeom(self,line,streamIn):
-    self.molCount+=1
+    elements = ['blank','H','He',
+                'Li','Be','B','C','N','O','F','Ne',
+                'Na','Mg','Al','Si','P','S','Cl','Ar',
+                'K','Ca','Sc','Ti','V','Cr','Mn','Fe',
+                'Co','Ni','Cu','Zn','Ga','Ge','As',
+                'Se','Br','Kr','Rb','Sr','Y','Zr','Nb',
+                'Mo','Tc','Ru','Rh','Pd','Ag','Cd',
+                'In','Sn','Sb','Te','I','Xe','Cs','Ba',
+                'La','Ce','Pr','Nd','Pm','Sm','Eu',
+                'Gd','Tb','Dy','Ho','Er','Tm','Yb',
+                'Lu','Hf','Ta','W','Re','Os','Ir','Pt',
+                'Au','Hg','Tl','Pb','Bi','Po','At',
+                'Rn','Fr','Ra','Ac','Th','Pa','U','Np',
+                'Pu','Am','Cm','Bk','Cf','Es','Fm',
+                'Md','No','Lr','Rf','Db','Sg','Bh',
+                'Hs','Mt','Ds','Rg','Cn','Uut','Fl',
+                'Uup','Lv','Uus','Uuo']
+    self.molCount += 1
     self.molecule = {}
     self.atomCount = 0
     self.molecule['id'] = 'Molecule.'+str(self.molCount)
+    self.molecularFormula = ''
     atoms = []
     for _ in range(3): 
       line = streamIn.readline()
@@ -943,6 +963,7 @@ class moleculeObj:
       geomUnit = 'angstrom'
     for _ in range(4): 
       line = streamIn.readline()
+    formulaList=[]
     while line:
       vars = line.split()
       if len(vars) < 6:
@@ -953,7 +974,15 @@ class moleculeObj:
         val = []
         atom['id'] = 'Atom.'+str(vars[0])+'.Mol.'+str(self.molCount)
         atom['elementLabel'] = vars[1]
-        atom['elementNumber'] = int(float(vars[2]))
+        elementNumber = int(float(vars[2]))
+        atom['elementNumber'] = elementNumber
+        atom['elementSymbol'] = elements[elementNumber]
+        if any(elements[elementNumber] in element for element in formulaList):
+          for element in formulaList:
+            if elements[elementNumber] in element:
+              element[1] += 1
+        else:
+          formulaList.append([elements[elementNumber],1])
         val = [float(vars[3]),float(vars[4]),float(vars[5])]
         cart['value'] = val
         cart['units'] = geomUnit
@@ -961,6 +990,19 @@ class moleculeObj:
         atoms.append(atom)
         self.atomCount += 1
       line = streamIn.readline()
+    for item in formulaList:
+      if item[0] == 'C':
+        self.molecularFormula += item[0]+str(item[1])
+        formulaList.remove(item)
+        break
+    for item in formulaList:
+      if item[0] == 'H':
+        self.molecularFormula += item[0]+str(item[1])
+        formulaList.remove(item)
+        break
+    formulaList.sort(key=lambda x: x[0])
+    for item in formulaList:
+       self.molecularFormula += item[0]+str(item[1])
     self.molecule['atoms'] = atoms
     symmetry = {}
     symmetry['groupname'] = 'C1'
