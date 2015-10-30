@@ -993,17 +993,26 @@ class moleculeObj:
       line = streamIn.readline()
     for item in formulaList:
       if item[0] == 'C':
-        self.molecularFormula += item[0]+str(item[1])
+        if item[1] == 1:
+          self.molecularFormula += item[0]
+        else:
+          self.molecularFormula += item[0]+str(item[1])
         formulaList.remove(item)
         break
     for item in formulaList:
       if item[0] == 'H':
-        self.molecularFormula += item[0]+str(item[1])
+        if item[1] == 1:
+          self.molecularFormula += item[0]
+        else:
+          self.molecularFormula += item[0]+str(item[1])
         formulaList.remove(item)
         break
     formulaList.sort(key=lambda x: x[0])
     for item in formulaList:
-       self.molecularFormula += item[0]+str(item[1])
+      if item[1] == 1:
+        self.molecularFormula += item[0]
+      else:
+        self.molecularFormula += item[0]+str(item[1])
     self.molecule['atoms'] = atoms
     symmetry = {}
     symmetry['groupname'] = 'C1'
