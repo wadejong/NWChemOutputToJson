@@ -406,7 +406,12 @@ class nwchemToJson:
     self.setMoleculeID()
     self.setSetup()
     self.calcTask['calculationSetup'] = self.calcSetup
-    self.calcTask['calculationType'] = 'geometryOptimization'
+    for _ in range(29):
+        line = streamIn.readline()
+    if line.find('Transition')>=0:
+      self.calcTask['calculationType'] = 'saddlePoint'
+    else:
+      self.calcTask['calculationType'] = 'geometryOptimization'
     while line:
       if  line.find('Optimization converged')>=0:
         line = streamIn.readline() 
