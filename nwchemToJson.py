@@ -409,7 +409,7 @@ class nwchemToJson:
     for _ in range(29):
         line = streamIn.readline()
     if line.find('Transition')>=0:
-      self.calcTask['calculationType'] = 'saddlePoint'
+      self.calcTask['calculationType'] = 'geometrySaddlePoint'
     else:
       self.calcTask['calculationType'] = 'geometryOptimization'
     while line:
