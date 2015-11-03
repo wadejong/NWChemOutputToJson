@@ -515,16 +515,17 @@ class nwchemToJson:
     minMod, maxMod = 0, 0
     while maxMod < (numberOfModes-1):
       minMod = maxMod
-      maxMod = min(minMod+6,numberOfModes-1)
+      maxMod = min(minMod+6,numberOfModes)
       if maxMod == 0: 
         break
-      rangeMod = maxMod - minMod + 1
+      rangeMod = maxMod - minMod 
+      offset = minMod * numberOfModes
       for i in range (minMod, maxMod):
         modVec = []
-        offset = minMod * numberOfModes
+        kset = i - minMod
         if abs(float(freq[i])) > 0.0:
           for j in range(offset, offset + numberOfModes * rangeMod, rangeMod):
-            modVec.append(float(mods[j]))
+            modVec.append(float(mods[j+kset]))
           normalModes.append({ 'id' : 'normalMode.'+str(i+1) , 
                                'normalModeFrequency' : { 'value' : float(freq[i]), 'units' : 'cm-1'}, 
                                'normalModeInfraRedIntensity' : { 'value' : float(inten[i]), 'units' : '(debye/angs)**2'},
