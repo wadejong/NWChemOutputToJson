@@ -330,7 +330,7 @@ class nwchemToJson:
         line = streamIn.readline()
         self.calcRes['totalEnergy'] = { 'value' : streamIn.readline().split('=')[1], 'units' : 'Hartree'}
         break
-      elif (line.find('Module')>=0 or line.find('Parallel integral file')>=0) and self.subTask:
+      elif (line.find('Module')>=0 or line.find('Parallel integral file')>=0 or line.find('Line search')>=0 or line.find('Saving state')>=0) and self.subTask:
         break
       elif line.find('XC Information')>=0: 
         xcFunc(streamIn)
@@ -425,7 +425,8 @@ class nwchemToJson:
       elif  line.find('Task  times')>=0:
         self.calcTask['calculationTime'] = self.readTaskTimes(line)
         break
-      elif line.find('Module')>=0: self.readScfDft(line,streamIn)
+      elif line.find('Module')>=0 and not line.find('Gradient')>=0: 
+        self.readScfDft(line,streamIn)
       line = streamIn.readline()
     self.calcTask['calculationResults'] = self.calcRes
     self.calculations.append(self.calcTask)
@@ -496,12 +497,15 @@ class nwchemToJson:
       'Projected Infra'      : intenVal
     }
     line = streamIn.readline()
+    energyRead = True
     while line:
       if  line.find('Task  times')>=0:
         self.calcTask['calculationTime'] = self.readTaskTimes(line)
         break
       elif line.find('Module')>=0 and not line.find('CPHF')>=0: 
-        self.readScfDft(line,streamIn)
+        if energyRead:
+          self.readScfDft(line,streamIn)
+          energyRead = False
       for freqKey in freqInp.keys():
         if line.find(freqKey)>=0:
           freqInp[freqKey](line,streamIn)
@@ -875,11 +879,11 @@ class basisObj:
       self.basis['id'] = 'BasisSet.'+str(self.basCount)
       self.basis['basisFunctions'] = []
     line = streamIn.readline()
+    emptyLine = 0
     while line:
-      if line.find('Module')>=0 or line.find('library')>=0 or line.find('NWChem'): 
+      if line.find('Module')>=0 or line.find('library')>=0 or line.find('NWChem')>=0 or emptyLine>1: 
         break
       vars = streamIn.readline().split()
-      print(vars)
       atomLab, atomName, elec = vars[0], vars[1].replace('(','').replace(')',''), vars[3]
       atomBasCount += 1
       ecpAtom = {}
@@ -901,9 +905,12 @@ class basisObj:
         if line.find('Module')>=0 or line.find('library')>=0 or line.find('electrons')>=0: 
           break
         vars = line.split()
-        if len(vars) != 0 and len(vars) != 5:
+        if len(vars) == 0:
+          emptyLine += 1
+        if (len(vars) != 0 and len(vars) != 5) or emptyLine>1:
           break
         if len(vars) == 5:
+           emptyLine = 0
            if int(vars[0]) == cont:
              ecpCont['id'] = atomLab+"-ecpc"+str(cont)
              ecpCont['basisSetShellType'] = vars[1].upper()
