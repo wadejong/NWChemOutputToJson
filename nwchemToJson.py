@@ -5,7 +5,7 @@ class nwchemToJson:
 
   def __init__(self,processOrbitals='doOrbitals'):
     self.simulationEnv = {}
-    self.simulationTime = {}
+    self.simulationTime = {'cpuTime' : 0.0, 'wallTime' : 0.0, 'units' : 'second'}
     self.calculations = []
     self.basis = basisObj()
     self.molecule = moleculeObj()
@@ -56,7 +56,7 @@ class nwchemToJson:
              break
            mytasks[myKey](line,streamIn)
       if line.find('Total times')>=0:
-        self.simulationTime = {'simulationTime' : self.readTiming(line)}
+        self.simulationTime = self.readTiming(line)
         break
       line = streamIn.readline()
 
