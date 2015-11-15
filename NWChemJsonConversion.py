@@ -8,6 +8,7 @@ else:
 for files in range(start,len(sys.argv)):
   fileIn = open(sys.argv[files],'r')
   fileOut = open(sys.argv[files]+'.json','w')
+  print('Converting file ',files)
   jsonObj = nwchemToJson(argument)
   fileOut.write(jsonObj.convert(fileIn))
   fileIn.close()
