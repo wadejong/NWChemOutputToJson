@@ -854,8 +854,8 @@ class basisObj:
           if int(vars[0]) == cont:
             basisCont['id'] = atomLab+"-orbc"+str(cont)
             basisCont['basisSetShellType'] = vars[1].lower()
-            basisExp.append(vars[2])
-            basisCoef.append(vars[3])
+            basisExp.append(float(vars[2]))
+            basisCoef.append(float(vars[3]))
           else:
             basisCont['basisSetExponent'] = basisExp
             basisCont['basisSetCoefficient'] = basisCoef
@@ -915,9 +915,9 @@ class basisObj:
            if int(vars[0]) == cont:
              ecpCont['id'] = atomLab+"-ecpc"+str(cont)
              ecpCont['basisSetShellType'] = vars[1].upper()
-             ecpRExp.append(vars[2])
-             ecpExp.append(vars[3])
-             ecpCoef.append(vars[4])
+             ecpRExp.append(float(vars[2]))
+             ecpExp.append(float(vars[3]))
+             ecpCoef.append(float(vars[4]))
            else:
              ecpCont['basisSetRExponent'] = ecpRExp
              ecpCont['basisSetExponent'] = ecpExp
