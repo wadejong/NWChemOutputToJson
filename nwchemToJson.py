@@ -282,7 +282,10 @@ class nwchemToJson:
                  break
               coefficients[int(vars[0])-1] = float(vars[1])
               if len(vars) > 6:
-                coefficients[int(vars[5])-1] = float(vars[6])
+                if len(vars) == 10 or (len(vars) == 11 and vars[9] in ['f','g','h','i']):
+                  coefficients[int(vars[5])-1] = float(vars[6])
+                elif len(vars) == 12 or (vars[4] in ['f','g','h','i']):
+                  coefficients[int(vars[6])-1] = float(vars[7])
             orbital['moCoefficients'] = coefficients
             molecularOrbital.append(orbital)
           else:
