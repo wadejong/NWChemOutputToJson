@@ -88,17 +88,20 @@ class nwchemToJson:
       lValue = lValueList[funcName[-1:]]
       functionList = [] 
       xyz = ['x','y','z']
+      if funcName == 's': 
+        functionList.append(funcName)
+        return functionList
+      elif funcName == 'p':
+        functionList.extend(('px','py','pz'))
+        return functionList
       if spherical: 
         for i in range(-lValue, lValue+1): 
-          functionList.append(str(i))
+          functionList.append(funcName+' '+str(i))
         return functionList
       def funcGen(lValue,funcName):
-        if lValue == 0: 
-          functionList.append(funcName)
-        else:
-          for comp in xyz:
-            if xyz.index(comp) >= (xyz.index(funcName[-1:]) if len(funcName)>1 else -1): 
-              funcGen(lValue-1,funcName+comp)
+        for comp in xyz:
+          if xyz.index(comp) >= (xyz.index(funcName[-1:]) if len(funcName)>1 else -1): 
+            funcGen(lValue-1,funcName+comp)
       funcGen(lValue,funcName)
       return functionList
     functionListForMolecule = []
@@ -270,6 +273,7 @@ class nwchemToJson:
             coefficients = [0.0] * len(molecularOrbitals['atomicOrbitalDescriptions'])
             vars = line.replace('=',' ').split()
             orbital['id'] = 'molecularOrbital'+spinLabel+'.'+str(vars[1])+'.Mol.'+str(self.molecule.molCount)
+            orbital['orbitalNumber'] = int(vars[1])
             orbital['orbitalEnergy'] = { 'value' : float(vars[5].replace('D','E')), 'units' : 'Hartree' }
             orbital['orbitalOccupancy'] = float(vars[3].replace('D','E'))
             if line.find('Symmetry')>=0:
