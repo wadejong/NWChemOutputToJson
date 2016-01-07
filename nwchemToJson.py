@@ -115,8 +115,56 @@ class nwchemToJson:
             atomString = str(atomNum)+' '+basis['elementLabel']+' '
             for x in generateFunctions(contr['basisSetShellType'],spherical): 
               functionListForMolecule.append(atomString+x)
-    return functionListForMolecule
+    return self.reorderFunctionsInMO(functionListForMolecule)
 
+  def reorderFunctionsInMO(self,coefficientsIn):
+    coefficients = []
+    functionCount = 0
+    for atom in self.molecule.molecule['atoms']:
+      for basis in self.basis.basis['basisFunctions']:
+        if basis['elementLabel'] == atom['elementLabel'] and basis['basisSetType'] == 'orbitalBasis':
+          spherical = basis['basisSetHarmonicType'] == 'spherical'
+          for contr in basis['basisSetContraction']:
+            if contr['basisSetShellType'] == 's':
+              coefficients.append(coefficientsIn[functionCount])
+              functionCount += 1
+            elif contr['basisSetShellType'] == 'p':
+              coefficients.append(coefficientsIn[functionCount])
+              coefficients.append(coefficientsIn[functionCount+1])
+              coefficients.append(coefficientsIn[functionCount+2])
+              functionCount += 3
+            elif contr['basisSetShellType'] == 'd':
+              if spherical:
+                coefficients.append(coefficientsIn[functionCount+2])
+                coefficients.append(coefficientsIn[functionCount+3])
+                coefficients.append(coefficientsIn[functionCount+1])
+                coefficients.append(coefficientsIn[functionCount+4])
+                coefficients.append(coefficientsIn[functionCount])
+                functionCount += 5
+              else:
+                coefficients.append(coefficientsIn[functionCount])
+                coefficients.append(coefficientsIn[functionCount+3])
+                coefficients.append(coefficientsIn[functionCount+5])
+                coefficients.append(coefficientsIn[functionCount+1])
+                coefficients.append(coefficientsIn[functionCount+2])
+                coefficients.append(coefficientsIn[functionCount+4])
+                functionCount += 6
+            elif contr['basisSetShellType'] == 'f':
+              if spherical:
+                coefficients.append(coefficientsIn[functionCount+3])
+                coefficients.append(coefficientsIn[functionCount+4])
+                coefficients.append(coefficientsIn[functionCount+2])
+                coefficients.append(coefficientsIn[functionCount+5])
+                coefficients.append(coefficientsIn[functionCount+1])
+                coefficients.append(coefficientsIn[functionCount+6])
+                coefficients.append(coefficientsIn[functionCount])
+                functionCount += 7
+              else:
+                for i in range(0,9):
+                  coefficients.append(coefficientsIn[functionCount+i])
+                functionCount += 9
+    return coefficients
+            
   def readInput(self,line,streamIn):
     inputData = ''
     line = streamIn.readline()
@@ -290,7 +338,7 @@ class nwchemToJson:
                   coefficients[int(vars[5])-1] = float(vars[6])
                 elif len(vars) == 12 or (vars[4] in ['f','g','h','i']):
                   coefficients[int(vars[6])-1] = float(vars[7])
-            orbital['moCoefficients'] = coefficients
+            orbital['moCoefficients'] = self.reorderFunctionsInMO(coefficients)
             molecularOrbital.append(orbital)
           else:
             break
@@ -460,7 +508,10 @@ class nwchemToJson:
       vars = line.split()
       entropy['totalEntropy'] = { 'value' : float(vars[3]), 'units' : vars[4] }
       vars = streamIn.readline().split()
-      entropy['translationalEntropyContribution'] = { 'value' : float(vars[3]), 'units' : vars[4], 'molecularWeight' :  vars[8].rstrip(')') }
+      if len(vars) == 8:
+        entropy['translationalEntropyContribution'] = { 'value' : float(vars[3]), 'units' : vars[4], 'molecularWeight' :  vars[7].rstrip(')').lstrip('=') }
+      else:
+        entropy['translationalEntropyContribution'] = { 'value' : float(vars[3]), 'units' : vars[4], 'molecularWeight' :  vars[8].rstrip(')') }
       vars = streamIn.readline().split()
       entropy['rotationalEntropyContribution'] = { 'value' : float(vars[3]), 'units' : vars[4], 'symmetryNumber' :  vars[8].rstrip(')') }
       vars = streamIn.readline().split()
