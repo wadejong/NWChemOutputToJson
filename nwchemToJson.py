@@ -101,7 +101,10 @@ class nwchemToJson:
       def funcGen(lValue,funcName):
         for comp in xyz:
           if xyz.index(comp) >= (xyz.index(funcName[-1:]) if len(funcName)>1 else -1): 
-            funcGen(lValue-1,funcName+comp)
+            if lValue>1:
+              funcGen(lValue-1,funcName+comp)
+            else:
+              functionList.append(funcName+comp)
       funcGen(lValue,funcName)
       return functionList
     functionListForMolecule = []
@@ -391,6 +394,8 @@ class nwchemToJson:
         xcFunc(streamIn)
       elif line.find('Molecular Orbital Analysis')>=0: 
         readOrbitals(line,streamIn)
+      elif line.find('Basis "ao')>=0:
+        self.basis.readBasis(line,streamIn)
       else:
         for scfKey in scfInp.keys(): 
           if line.find(scfKey)>=0: 
