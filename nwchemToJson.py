@@ -62,13 +62,14 @@ class nwchemToJson:
 
     return json.dumps({'simulation' : { 'simulationEnvironment' : self.simulationEnv,
                                         'calculations'          : self.calculations,
-                                        'simulationTime'        : self.simulationTime }}, 
-                                         indent = 2, separators=(',', ': '), ensure_ascii=False)
+                                        'simulationTime'        : self.simulationTime }},
+                                         indent = 2, separators=(',', ': '), ensure_ascii=False,
+                                         sort_keys=True)
 
   def setMoleculeID(self):
     self.calcTask['id'] = 'calculation.'+str(self.taskNumber)
     self.calcTask['molecularFormula'] = self.molecule.molecularFormula
- 
+
   def setSetup(self):
     if self.molecule.geomUpdated:
       self.calcSetup['molecule'] = self.molecule.molecule
