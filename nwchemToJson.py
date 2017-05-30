@@ -62,13 +62,14 @@ class nwchemToJson:
 
     return json.dumps({'simulation' : { 'simulationEnvironment' : self.simulationEnv,
                                         'calculations'          : self.calculations,
-                                        'simulationTime'        : self.simulationTime }}, 
-                                         indent = 2, separators=(',', ': '), ensure_ascii=False)
+                                        'simulationTime'        : self.simulationTime }},
+                                         indent = 2, separators=(',', ': '), ensure_ascii=False,
+                                         sort_keys=True)
 
   def setMoleculeID(self):
     self.calcTask['id'] = 'calculation.'+str(self.taskNumber)
     self.calcTask['molecularFormula'] = self.molecule.molecularFormula
- 
+
   def setSetup(self):
     if self.molecule.geomUpdated:
       self.calcSetup['molecule'] = self.molecule.molecule
@@ -386,7 +387,9 @@ class nwchemToJson:
         break
       elif line.find('is already converged')>=0:
         line = streamIn.readline()
-        self.calcRes['totalEnergy'] = { 'value' : streamIn.readline().split('=')[1], 'units' : 'Hartree'}
+        total_energy = streamIn.readline().split('=')[1]
+        total_energy = float(total_energy.replace('D','E'))
+        self.calcRes['totalEnergy'] = { 'value' : total_energy, 'units' : 'Hartree'}
         break
       elif (line.find('Module')>=0 or line.find('Parallel integral file')>=0 or line.find('Line search')>=0 or line.find('Saving state')>=0) and self.subTask:
         break
