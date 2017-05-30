@@ -193,7 +193,10 @@ class nwchemToJson:
         break
       for envKey in envList.keys():
         if line.find(envKey)>=0: 
-          self.simulationEnv[envList.get(envKey)] = line.split('=')[1].lstrip(' ').rstrip('\n')
+          if envKey == 'nproc':
+            self.simulationEnv['processorCount'] = int(line.split('=')[1].lstrip(' ').rstrip('\n'))
+          else:
+            self.simulationEnv[envList.get(envKey)] = line.split('=')[1].lstrip(' ').rstrip('\n')
       line = streamIn.readline()
   
   def readTaskTimes(self,line):
