@@ -62,14 +62,13 @@ class nwchemToJson:
 
     return json.dumps({'simulation' : { 'simulationEnvironment' : self.simulationEnv,
                                         'calculations'          : self.calculations,
-                                        'simulationTime'        : self.simulationTime }},
-                                         indent = 2, separators=(',', ': '), ensure_ascii=False,
-                                         sort_keys=True)
+                                        'simulationTime'        : self.simulationTime }}, 
+                                         indent = 2, separators=(',', ': '), ensure_ascii=False)
 
   def setMoleculeID(self):
     self.calcTask['id'] = 'calculation.'+str(self.taskNumber)
     self.calcTask['molecularFormula'] = self.molecule.molecularFormula
-
+ 
   def setSetup(self):
     if self.molecule.geomUpdated:
       self.calcSetup['molecule'] = self.molecule.molecule
@@ -97,7 +96,7 @@ class nwchemToJson:
         return functionList
       if spherical: 
         for i in range(-lValue, lValue+1): 
-          functionList.append(funcName+' '+str(i))
+          functionList.append(funcName+str(i))
         return functionList
       def funcGen(lValue,funcName):
         for comp in xyz:
@@ -113,7 +112,7 @@ class nwchemToJson:
     for atom in self.molecule.molecule['atoms']:
       atomNum+=1
       for basis in self.basis.basis['basisFunctions']:
-        if basis['elementLabel'] == atom['elementLabel'] and basis['basisSetType'] == 'orbitalBasis':
+        if basis['elementLabel'].lower() == atom['elementLabel'].lower() and basis['basisSetType'] == 'orbitalBasis':
           spherical = basis['basisSetHarmonicType'] == 'spherical'
           for contr in basis['basisSetContraction']:
             atomString = str(atomNum)+' '+basis['elementLabel']+' '
@@ -193,10 +192,7 @@ class nwchemToJson:
         break
       for envKey in envList.keys():
         if line.find(envKey)>=0: 
-          if envKey == 'nproc':
-            self.simulationEnv['processorCount'] = int(line.split('=')[1].lstrip(' ').rstrip('\n'))
-          else:
-            self.simulationEnv[envList.get(envKey)] = line.split('=')[1].lstrip(' ').rstrip('\n')
+          self.simulationEnv[envList.get(envKey)] = line.split('=')[1].lstrip(' ').rstrip('\n')
       line = streamIn.readline()
   
   def readTaskTimes(self,line):
@@ -390,9 +386,7 @@ class nwchemToJson:
         break
       elif line.find('is already converged')>=0:
         line = streamIn.readline()
-        total_energy = streamIn.readline().split('=')[1]
-        total_energy = float(total_energy.replace('D','E'))
-        self.calcRes['totalEnergy'] = { 'value' : total_energy, 'units' : 'Hartree'}
+        self.calcRes['totalEnergy'] = { 'value' : streamIn.readline().split('=')[1], 'units' : 'Hartree'}
         break
       elif (line.find('Module')>=0 or line.find('Parallel integral file')>=0 or line.find('Line search')>=0 or line.find('Saving state')>=0) and self.subTask:
         break
