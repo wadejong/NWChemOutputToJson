@@ -1,6 +1,6 @@
 ##############################################################################
 # This source file is part of the NWChemOutputToJson project.
-# Copyright (c) 2016, The Regents of the University of California, through 
+# Copyright (c) 2018, The Regents of the University of California, through 
 # Lawrence Berkeley National Laboratory (subject to receipt of any required 
 # approvals from the U.S. Dept. of Energy).
 # This source code is released under the BSD 3-Clause License, (the "License").
@@ -11,18 +11,19 @@
 # limitations under the License.
 ##############################################################################
 
-from nwchemToJson import *
-if sys.argv[1] == 'noOrbitals':
-  start = 2
-  argument = 'noOrbitals'
-else:
-  start = 1
-  argument = ''
-for files in range(start,len(sys.argv)):
-  fileIn = open(sys.argv[files],'r')
-  fileOut = open(sys.argv[files]+'.json','w')
-  print('Converting file ',sys.argv[files])
-  jsonObj = nwchemToJson(argument)
-  fileOut.write(jsonObj.convert(fileIn))
-  fileIn.close()
-  fileOut.close()
+from distutils.core import setup
+import setuptools
+
+setup(
+    name='nwchem2json',
+    version='1.0.0',
+    url='https://github.com/wadejong/NWChemOutputToJson',
+    author='Bert de Jong',
+    description='Python files for reading NWChem output and converting to Json',
+    packages=setuptools.find_packages(),
+    entry_points={
+        'console_scripts': [
+            'nwchem2json=nwchem2json.scripts.nwchem2json:main',
+        ],
+    },
+)
