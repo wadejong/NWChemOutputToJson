@@ -4,7 +4,7 @@ Python files for reading NWChem output and converting to Json
 
 Use case:
 
-python NWChemJsonConversion.py [noOrbitals] <one or more output files>   
+nwchem2json.py [noOrbitals] <one or more output files>   
 
 (noOrbitals is an optional keyword supressing storing orbitals in the JSON file. 
  Note, the orbital coefficients are read from the output, and by default only
